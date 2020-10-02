@@ -8,7 +8,7 @@ global words
 words = []
 
 def wordinit():
-    f = open('words.txt', 'r')
+    f = open('nouns.txt', 'r')
     words.append((f.readline()).split(' '))
 
 def graph(intensity):
@@ -16,7 +16,7 @@ def graph(intensity):
 
     time=[i for i in range(100)]
     values=[noise.valueAt(i) for i in time]
-    titlestring = "Average "+words[0][random.randint(0,len(words[0]))]+" size by age in the UK"
+    titlestring = "Average discrimination against "+words[0][random.randint(0,len(words[0]))]+" by age in the UK"
     plt.title(titlestring)
     plt.xlabel("Age")
     plt.ylabel("Size")
